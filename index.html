@@ -52,14 +52,17 @@
 <body>
     <div class="Main">
         <h1>Тестовое приложение</h1>
+        <p id="textToChange">Исходный текст</p>
         <p></p>
         <button id="btn">Кнопка</button>
         <script>
             document.getElementById('btn').addEventListener('click', function() {
 
                 console.log('Скрипт воспроизведен');
-                console.log(WebApp.WebAppUser.username);
-                console.log('Скрипт воспроизведен');
+                console.log();
+                var button = document.getElementById("btn");
+                var text = document.getElementById("textToChange");
+                text.textContent = WebApp.WebAppUser.username;
 
             });
         </script>
