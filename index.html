@@ -57,8 +57,9 @@
         <script>
             document.getElementById('btn').addEventListener('click', function() {
 
-                var WebApp = window.Telegram.WebApp;
-                WebApp.showAlert(`Добро пожаловать, @${WebApp.WebAppUser.username}.`);
+                console.log('Скрипт воспроизведен');
+                console.log(WebApp.WebAppUser.username);
+                console.log('Скрипт воспроизведен');
 
             });
         </script>
