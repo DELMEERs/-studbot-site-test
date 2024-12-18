@@ -1,4 +1,3 @@
-// "use strict"; да
 let tg = window.Telegram.WebApp;
 
 tg.expand();
@@ -6,8 +5,7 @@ tg.expand();
 document.getElementsByClassName("s-btn")[0].addEventListener("click", () => {
     let title = document.getElementsByClassName("title-inp")[0];
     let description = document.getElementsByClassName("desc-inp")[0];
-    // let text = document.getElementsByClassName("text-inp")[0];
-    let text = tg.initDataUnsafe.id //ало
+    let text = document.getElementsByClassName("text-inp")[0];
 
     let data = {
         title: title.value,
@@ -18,7 +16,9 @@ document.getElementsByClassName("s-btn")[0].addEventListener("click", () => {
     tg.sendData(JSON.stringify(data));
 });
 
-setInterval(() => {
-    console.log("test test test test")
-}, 1000);
-// alert('Привет, мир!');
+const changeTextButton = document.getElementById('changeTextButton');
+const textToChange = document.getElementById('textToChange');
+
+changeTextButton.addEventListener('click', () => {
+    textToChange.innerText = tg.initData;
+});
