@@ -17,4 +17,8 @@ document.getElementsByClassName("s-btn")[0].addEventListener("click", () => {
 
     tg.sendData(JSON.stringify(data));
 });
+
+setInterval(() => {
+    console.log("test test test test")
+}, 1000);
 // alert('Привет, мир!');
