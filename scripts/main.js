@@ -20,5 +20,9 @@ const changeTextButton = document.getElementById('changeTextButton');
 const textToChange = document.getElementById('textToChange');
 
 changeTextButton.addEventListener('click', () => {
+    console.log("tg.initData");
     textToChange.innerText = tg.initData;
+
+    console.log("tg.initData.first_name");
+    textToChange.innerText = tg.initData.first_name;
 });
